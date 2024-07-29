@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #664981;
+}
+
+.head{
+    margin-bottom: 50px;
+    font-weight: bolder;
+    color:#f0e8ae ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.prev, .next {
+    cursor: pointer;
+}
+
+.calendar {
+    background-color: #f7f3f6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0e8ae;
+    padding: 10px 0;
+}
+
+.weekdays div {
+    width: calc(100% / 7);
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.days div {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.days div:hover {
+    background-color: #ccd899;
+}
+
+
+
+
+@media screen and (max-width: 480px) and (min-width: 300px){
+    .calendar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 396px) and (min-width: 300px){
+    .days div {
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
